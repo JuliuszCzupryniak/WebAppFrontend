@@ -1,0 +1,9 @@
+.products {
+  height: calc(100vh - 160px);
+}
+
+.product {
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: 60% calc(40% - 150px) 150px;
+}

@@ -1,0 +1,24 @@
+<div class="page-background">
+  <div class="margins">
+    <mat-tab-group>
+      <mat-tab label="Warzywa">
+        <div class="products scrollable">
+          <mat-card *ngFor="let v of vegetables" class="product">
+            <span>{{v.name_product}}</span>
+            <span>{{v.price_product}}zł</span>
+            <button mat-raised-button color="accent" (click)="addProduct(v)">Dodaj do koszyka</button>
+          </mat-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Owoce">
+        <div class="products scrollable">
+          <mat-card *ngFor="let f of fruits" class="product">
+            <span>{{f.name_product}}</span>
+            <span>{{f.price_product}}zł</span>
+            <button mat-raised-button color="accent" (click)="addProduct(f)">Dodaj do koszyka</button>
+          </mat-card>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

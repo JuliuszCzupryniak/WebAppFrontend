@@ -1,0 +1,28 @@
+<div class="page-background">
+  <div class="margins">
+    <mat-card>
+      <mat-card-title>
+        Dane do przesyłki
+      </mat-card-title>
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Miasto</mat-label>
+          <input matInput [(ngModel)]="city">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Kod pocztowy</mat-label>
+          <input matInput [(ngModel)]="zipcode">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Adres</mat-label>
+          <input matInput [(ngModel)]="address">
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+    <br>
+    <br>
+    <button mat-raised-button color="warn" (click)="sendOrder()">Zamów</button>
+  </div>
+</div>

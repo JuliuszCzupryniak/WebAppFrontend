@@ -1,0 +1,6 @@
+<mat-toolbar>
+  <span class="title" [routerLink]="'dashboard'">WARZYWNIAK ON-LINE</span>
+  <span class="spacer"></span>
+  <button mat-raised-button color="primary" style="margin-right: 8px">Zamówienia</button>
+  <button mat-raised-button color="warn" [routerLink]="'basket'">Koszyk ({{(sum | async) | number : '1.2'}}zł)</button>
+</mat-toolbar>

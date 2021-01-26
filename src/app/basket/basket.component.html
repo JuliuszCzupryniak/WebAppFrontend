@@ -1,0 +1,24 @@
+<div class="page-background">
+  <div class="margins">
+    <mat-card class="products scrollable">
+      <div class="product">
+        <span>Ilość</span>
+        <span>Produkt</span>
+        <span>Łączna cena</span>
+      </div>
+      <div *ngFor="let product of basket" class="product">
+        <span>{{product.quantity}}x</span>
+        <span>{{product.product.name_product}}</span>
+        <span>{{(product.quantity * product.product.price_product) | number : '1.2'}}zł</span>
+      </div>
+      <hr>
+      <div>Suma: {{sumBasket() | number : '1.2'}}zł</div>
+    </mat-card>
+    <mat-card style="margin-top: 8px">
+      <button mat-raised-button color="warn" style="margin-right: 8px" [routerLink]="'/order'"
+              [disabled]="!basket.length">Realizuj zamówienie
+      </button>
+      <button mat-raised-button color="accent" (click)="clearBasket()">Wyczyść koszyk</button>
+    </mat-card>
+  </div>
+</div>
